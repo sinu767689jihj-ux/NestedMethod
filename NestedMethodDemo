@@ -1,0 +1,24 @@
+public class NestedMethodDemo {
+    int rollNo;
+    String name;
+    int marks;
+    void display(int rollNo,String name)
+    {
+        this.rollNo=rollNo;
+        this.name=name;
+        System.out.println("Dispaly Method");
+        System.out.println("Roll No:"+rollNo+"\n"+"Name:"+name);
+    }
+    void marks(int rollNo,String name,int marks)
+    {
+        this.marks=marks;
+        display(rollNo,name);
+        System.out.println("Marks Method");
+        System.out.println("Marks:"+marks);
+    }
+    public static void main(String[] args)
+    {
+        NestedMethodDemo nmd=new NestedMethodDemo();
+        nmd.marks(101,"SrinuMagam",85);
+    }
+}
